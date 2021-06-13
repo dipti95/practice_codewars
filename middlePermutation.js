@@ -1,3 +1,5 @@
+// codeWars problem 
+
 function middlePermutation(s) {
     var n=s.length
     s=s.split("").sort().join("")

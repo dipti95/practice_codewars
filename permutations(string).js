@@ -24,7 +24,7 @@ function permutations(array) {
   helper(0,array,perm)
   return perm
 }
-
+    
 function helper(i,array,perm){
   if(array.length -1 === i) perm.push(array.slice());
   else {

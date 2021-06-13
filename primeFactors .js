@@ -41,7 +41,7 @@ const primeFactors = n => {
 
   // one more way but time complexity is more ;
   // This solution is by using hashmap;
-  
+  // In this space complexity is also more ;
   function primeFactors(n){
   const factors = []; 
   let hash = {}
