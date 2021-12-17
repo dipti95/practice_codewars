@@ -1,3 +1,10 @@
+/**
+ g (integer >= 2) which indicates the gap we are looking for
+
+m (integer > 2) which gives the start of the search (m inclusive)
+
+n (integer >= m) which gives the end of the search (n inclusive) */
+
 function gap(g, m, n) {
   let arr = [];
   for (let i = m; i <= n; i++) {
