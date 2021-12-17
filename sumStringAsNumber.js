@@ -16,3 +16,14 @@ function sumStrings(a, b) {
   while (sumDigits[0] == "0") sumDigits.shift();
   return sumDigits.join("");
 }
+
+// solution below is also somewhat right but it is failing for a large number sum
+function sumStrings(a, b) {
+  if (a === "") return b;
+  if (b === "") return a;
+  a = parseInt(a);
+
+  b = parseInt(b);
+
+  return (a + b).toString();
+}
