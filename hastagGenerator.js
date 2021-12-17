@@ -15,3 +15,19 @@ function generateHashtag(str) {
   if (!result.length) return false;
   return result.length > 140 ? false : result;
 }
+
+// Better way
+function generateHashtag(str) {
+  str = str
+    .split(" ")
+    .map((words) => {
+      return words.charAt(0).toUpperCase() + words.slice(1);
+    })
+    .join("");
+
+  if (str.length === 0) return false;
+
+  str = "#" + str;
+
+  return str.length > 140 ? false : str;
+}
