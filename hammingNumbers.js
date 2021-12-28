@@ -21,3 +21,20 @@ function hamming(n) {
   console.log(arr);
   return arr[arr.length - 1];
 }
+
+//come with another solution
+function hamming(n) {
+  let arr = [1];
+  let idx2 = 0;
+  let idx3 = 0;
+  let idx5 = 0;
+
+  for (let i = 1; i < n; i++) {
+    let ele = Math.min(2 * arr[idx2], 3 * arr[idx3], 5 * arr[idx5]);
+    arr.push(ele);
+    if (ele >= 2 * arr[idx2]) idx2++;
+    if (ele >= 3 * arr[idx3]) idx3++;
+    if (ele >= 5 * arr[idx5]) idx5++;
+  }
+  return arr[n - 1];
+}
